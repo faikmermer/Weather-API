@@ -13,10 +13,11 @@ async function getWeather(req: Express.Request, res: Express.Response) : Promise
         return res.status(400).json({error: "City is required"});
     }
 
-    const data = await client.get(city);
+    const data = await client.get("city");
 
     if(data){
-        return res.json(JSON.parse(data));
+        const strData = JSON.parse(data);
+        return res.json(strData.days[0]);
     }else{
         const data = await fetchWeatherData(city);
         await client.setEx("city", Number(config.cacheExpireSeconds), JSON.stringify(data));
