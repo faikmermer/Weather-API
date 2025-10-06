@@ -5,7 +5,7 @@
   - [Installation](#Installation)
   - [Contributing](#Contributing)
   - [License](#License)
-  - [ProjectDetails](#ProjectDetails)
+  - [Project Details](#Project-Details)
 
 ## Overview
 - VıisalCrossing was used as a thrid-party and API for Redis to create cache. Clik information for more details [REDİS](https://redis.io/docs/latest/develop/clients/nodejs/connect)
